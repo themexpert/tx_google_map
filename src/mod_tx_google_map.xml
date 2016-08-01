@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+  <name>MOD_TX_GOOGLE_MAP</name>
+  <author>ThemeXpert</author>
+  <authorEmail>info@themexpert</authorEmail>
+  <authorUrl>www.themexpet.com</authorUrl>
+  <creationDate>##CREATIONDATE##</creationDate>
+  <copyright>Copyright (C) 2010 - 2012 ThemeXpert. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>##VERSION##</version>
+  <description>MOD_TX_GOOGLE_MAP_DESC</description>
+
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.mod_tx_google_map.ini</language>
+    <language tag="en-GB">en-GB/en-GB.mod_tx_google_map.sys.ini</language>
+  </languages>
+
+  <files>
+    <filename module="mod_tx_google_map">mod_tx_google_map.php</filename>
+    <folder>tmpl</folder>
+    <filename>index.html</filename>
+  </files>
+
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+
+        <field type="text" name="api" label="MOD_TX_GOOGLE_MAP_API" description="MOD_TX_GOOGLE_MAP_API_DESC"/>
+
+        <field type="media" name="marker_image" label="MOD_TX_GOOGLE_MAP_MARKER_IMAGE" description="MOD_TX_GOOGLE_MAP_MARKER_IMAGE_DESC"/>
+
+        <field type="spacer" name="location_header" label="MOD_TX_GOOGLE_MAP_LOCATION_HEADER" class="text-info"/>
+
+        <field name="lat" type="text" default="-33.8665" label="MOD_TX_GOOGLE_MAP_LAT_TITLE" description="MOD_TX_GOOGLE_MAP_LAT_DESC"/>
+
+        <field name="lng" type="text" default="151.1956" label="MOD_TX_GOOGLE_MAP_LNG_TITLE" description="MOD_TX_GOOGLE_MAP_LNG_DESC"/>
+
+        <field name="height" type="text" default="300" label="MOD_TX_GOOGLE_MAP_HEIGHT_TITLE" description="MOD_TX_GOOGLE_MAP_HEIGHT_DESC"/>
+
+        <field name="map_type" type="list" default="ROADMAP" label="MOD_TX_GOOGLE_MAP_TYPE_TITLE" description="MOD_TX_GOOGLE_MAP_TYPE_DESC">
+    			<option value="ROADMAP">MOD_TX_GOOGLE_MAP_TYPE_ROADMAP</option>
+    			<option value="SATELLITE">MOD_TX_GOOGLE_MAP_TYPE_SATELLITE</option>
+    			<option value="HYBRID">MOD_TX_GOOGLE_MAP_TYPE_HYBRID</option>
+    			<option value="TERRAIN">MOD_TX_GOOGLE_MAP_TYPE_TERRAIN</option>
+    		</field>
+
+        <field name="zoom" type="text" default="15" label="MOD_TX_GOOGLE_MAP_ZOOM_TITLE" description="MOD_TX_GOOGLE_MAP_ZOOM_DESC"/>
+
+        <field name="enable_style" type="radio" class="btn-group" default="1" label="Style Map" description="Style map">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+
+      </fieldset>
+
+      <fieldset name="advanced">
+        <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+        <field name="moduleclass_sfx" type="textarea" default="" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+
+        <field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+          <option value="1">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+        </field>
+
+        <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+        <field name="cachemode" type="hidden" default="itemid">
+          <option value="itemid"/>
+        </field>
+
+      </fieldset>
+    </fields>
+  </config>
+
+  <!-- UPDATESERVER DEFINITION -->
+  <updateservers>
+          <server type="extension" priority="1" name="Xpert Google Map Module">https://raw.githubusercontent.com/themexpert/mod_tx_google_map/master/mainfest.xml</server>
+  </updateservers>
+</extension>

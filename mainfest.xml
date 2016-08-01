@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+        <update>
+                <name>Xpert Google Map</name>
+                <description>Xpert Google Map Module Update</description>
+                <element>mod_tx_google_map</element>
+                <type>module</type>
+                <version>1.3.0</version>
+                <client>site</client>
+                <infourl title="Xpert Contact Module">https://github.com/themexpert/xpertcontact/releases/tag/1.3.0</infourl>
+                <downloads>
+                        <downloadurl type="full" format="zip">https://github.com/themexpert/xpertcontact/releases/download/1.3.0/mod_tx_google_map_v1.3.0.zip</downloadurl>
+                </downloads>
+                <tags>
+                        <tag>1.3.0</tag>
+                </tags>
+                <targetplatform name="joomla" version="3.0" />
+        </update>
+</updates>
