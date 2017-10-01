@@ -27,6 +27,8 @@
 
         <field type="text" name="api" label="MOD_TX_GOOGLE_MAP_API" description="MOD_TX_GOOGLE_MAP_API_DESC"/>
 
+        <field type="media" name="marker_image_test" label="MOD_TX_GOOGLE_MAP_MARKER_IMAGE" description="MOD_TX_GOOGLE_MAP_MARKER_IMAGE_DESC" showon="abc:10" />
+        
         <field type="media" name="marker_image" label="MOD_TX_GOOGLE_MAP_MARKER_IMAGE" description="MOD_TX_GOOGLE_MAP_MARKER_IMAGE_DESC"/>
 
         <field type="spacer" name="location_header" label="MOD_TX_GOOGLE_MAP_LOCATION_HEADER" class="text-info"/>
